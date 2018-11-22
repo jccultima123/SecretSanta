@@ -19,63 +19,63 @@ class Home extends React.Component {
       {
         "id": 0,
         "name": "Jordan",
-        "emailAddress": "jdrobery@gmail.com",
+        "emailAddress": "dev@spun-labs.com",
         "address": "Flat 209, 3 Cambridge Street, Chorlton Mill, Manchester M15BY",
         "cantHave": [1]
       },
       {
         "id": 1,
         "name": "Vanesa",
-        "emailAddress": "v.vongvarotai@gmail.com",
+        "emailAddress": "dev@spun-labs.com",
         "address": "Flat 209, 3 Cambridge Street, Chorlton Mill, Manchester M15BY",
         "cantHave": [0]
       },
       {
         "id": 2,
         "name": "Laura",
-        "emailAddress": "lssweatherhead@googlemail.com",
+        "emailAddress": "dev@spun-labs.com",
         "address": "8 The Mount, Canterbury, Kent CT3 4AN",
         "cantHave": []
       },
       {
         "id": 3,
         "name": "Olivia",
-        "emailAddress": "liv275@hotmail.com",
+        "emailAddress": "dev@spun-labs.com",
         "address": "100 Battersby Road, London SE6 1SB",
         "cantHave": [4]
       },
       {
         "id": 4,
         "name": "Tirth",
-        "emailAddress": "tirthp@gmail.com",
+        "emailAddress": "dev@spun-labs.com",
         "address": "100 Battersby Road, London SE6 1SB",
         "cantHave": [3]
       },
       {
         "id": 5,
         "name": "Carly",
-        "emailAddress": "cfpattinson@gmail.com",
+        "emailAddress": "dev@spun-labs.com",
         "address": "34 Todshaugh Gardens, Kirkliston EH29 9GE",
         "cantHave": [6, 7]
       },
       {
         "id": 6,
         "name": "Michael",
-        "emailAddress": "michaelbottom@hotmail.com",
+        "emailAddress": "dev@spun-labs.com",
         "address": "34 Todshaugh Gardens, Kirkliston EH29 9GE",
         "cantHave": [5, 7]
       },
       {
         "id": 7,
         "name": "Liam",
-        "emailAddress": "liamconcannon11@gmail.com",
+        "emailAddress": "dev@spun-labs.com",
         "address": "126 Plodder Lane, Bolton BL4 0BU",
         "cantHave": [5, 6]
       },
       {
         "id": 8,
         "name": "Harriet",
-        "emailAddress": "harriet.macmillan@hotmail.co.uk",
+        "emailAddress": "dev@spun-labs.com",
         "address": "14/2 Henderson Street, Edinburgh, EH6 6BS",
         "cantHave": []
       },
@@ -140,7 +140,7 @@ class Home extends React.Component {
           return peeps.id === sendingData.ss_id;
         });
 
-        //console.log("[amendment for " + sendingData.to_name + "]", thisGuy.name);
+        console.log("[amendment for " + sendingData.to_name + "]", thisGuy.name);
 
         //you are now their recipient
         sendingData.ss_id = thisGuy.id;
@@ -148,7 +148,7 @@ class Home extends React.Component {
         sendingData.ss_address = thisGuy.address;
       }
 
-      //console.log("["+ thisGuy.name  +" has]", recipient.name);
+      console.log("["+ thisGuy.name  +" has]", recipient.name);
 
       dataToSend.push({
         "id": thisGuy.id,
@@ -162,7 +162,7 @@ class Home extends React.Component {
       //console.log("[data to send]", dataToSend);
     }
 
-    //console.log("[data to send]", dataToSend);
+    console.log("[data to send]", dataToSend);
 
     for(var y = 0; y < dataToSend.length; y++) {
       var emailParams = {
